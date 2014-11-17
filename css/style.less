@@ -9,7 +9,10 @@
 @part: ~'--';
 
 @default-font-family: 'Lato', sans-serif;
+
+@lightest-color: #fff;
 @default-text-color: #555;
+@lighter-text-color: #999;
 @light-text-color: #777;
 @primary-color: #ed4e4e;
 
@@ -165,6 +168,174 @@ h1 {
     font-size: 9px;
     font-weight: 300;
     color: @default-text-color;
+  }
+}
+
+@{component}slider-users {
+  @slider-bg: #f2f2f2;
+
+  position: relative;
+  background: @slider-bg;
+  padding: 25px;
+
+  article {
+    position: relative;
+    width: 33.3%;
+    float: left;
+    text-align: center;
+    margin-bottom: 5px;
+    -webkit-transform: scaleX(0) translate3d(0,0,0);
+    -moz-transform: scaleX(0) translate3d(0,0,0);
+    -ms-transform: scaleX(0) translate3d(0,0,0);
+    -o-transform: scaleX(0) translate3d(0,0,0);
+    transform: scaleX(0) translate3d(0,0,0);
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transition: all .4s;
+    -moz-transition: all .4s;
+    -ms-transition: all .4s;
+    -o-transition: all .4s;
+    transition: all .4s;
+    max-width: 0px;
+    
+    &.active {
+      -webkit-transform: scaleX(1) translate3d(0,0,0);
+      -moz-transform: scaleX(1) translate3d(0,0,0);
+      -ms-transform: scaleX(1) translate3d(0,0,0);
+      -o-transform: scaleX(1) translate3d(0,0,0);
+      transform: scaleX(1) translate3d(0,0,0);
+      max-width: 300px;
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      height: 90%;
+      width: 1px;
+      background: overlay(@slider-bg, rgba(0,0,0,.5));
+      border-left: 1px solid overlay(@slider-bg, rgba(255,255,255,.35));
+      position: absolute;
+      left: -1px;
+      top: 0;
+    }
+
+    &.active.first:before {
+      display: none;
+    }
+  }
+
+  &@{part}slides-wrapper {
+    height: 135px;
+    overflow: hidden;
+  }
+
+  &@{part}photo {
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    border: 3px solid rgba(51,51,51,.37);
+    overflow: hidden;
+    width: 63px;
+    height: 63px;
+    margin: 0 auto;
+
+    img {
+      -webkit-border-radius: 100%;
+      -moz-border-radius: 100%;
+      border-radius: 100%;
+      width: 100%;
+    }
+  }
+
+  h2 {
+    font-size: 10px;
+    margin: 7px 0 2px;
+  }
+
+  h3 {
+    font-size: 8px;
+    margin: 2px 0 7px;
+    color: @lighter-text-color;
+  }
+
+  @{component}btn {
+    display: inline-block;
+    border: 1px solid @lighter-text-color;
+    background: none;
+    font-size: 7px;
+    font-weight: normal;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    line-height: 15px;
+    padding: 0 7px;
+
+    &@{tweak}online {
+      background: rgba(42,146,64,.05);
+
+      &:before {
+        content: '';
+        display: inline-block;
+        width: 5px;
+        height: 5px;
+        -webkit-border-radius: 100%;
+        -moz-border-radius: 100%;
+        border-radius: 100%;
+        background: #10f03f;
+        border: 1px solid @lightest-color;
+        margin-right: 3px;
+        vertical-align: text-bottom;
+      }
+    }
+
+    &@{tweak}offline {
+      background: rgba(red(@primary-color),green(@primary-color),blue(@primary-color),.05);
+
+      &:before {
+        content: '';
+        display: inline-block;
+        width: 5px;
+        height: 5px;
+        -webkit-border-radius: 100%;
+        -moz-border-radius: 100%;
+        border-radius: 100%;
+        background: @primary-color;
+        border: 1px solid @lightest-color;
+        margin-right: 3px;
+        vertical-align: text-bottom;
+      }
+    }
+  }
+
+  &@{part}navigation {
+
+    button {
+      position: absolute;
+      display: block;
+      background: none;
+      border: none;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      -o-transform: translateY(-50%);
+      transform: translateY(-50%);
+      width: 12px;
+      height: 21px;
+
+      &.left {
+        left: 10px;
+        background: url("../img/arrow_left.svg") top left no-repeat;
+      }
+
+      &.right {
+        right: 10px;
+        background: url("../img/arrow_right.svg") top left no-repeat;
+      }
+    }
   }
 }
 
