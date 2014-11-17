@@ -1,0 +1,143 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic);
+@import "normalize.css";
+@import "main.css";
+body {
+  font-family: 'Lato', sans-serif;
+  color: #555555;
+  background: url("../img/bg.png") repeat;
+}
+.container {
+  position: relative;
+  margin: 0 20px;
+}
+.container:before,
+.container:after {
+  content: "";
+  display: table;
+}
+.container:after {
+  clear: both;
+}
+.\+text-right {
+  text-align: right;
+}
+.\+text-left {
+  text-align: right;
+}
+.\+text-center {
+  text-align: center;
+}
+.\+text-justify {
+  text-align: justify;
+}
+.\+uppercase {
+  text-transform: uppercase;
+}
+.\+relative {
+  position: relative;
+}
+.\@main_header {
+  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.19) 0%, rgba(0, 0, 0, 0.19) 100%), url('../img/header_bg_pattern.png');
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0.19)), color-stop(100%, rgba(0, 0, 0, 0.19))), url('../img/header_bg_pattern.png');
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.19) 0%, rgba(0, 0, 0, 0.19) 100%), url('../img/header_bg_pattern.png');
+  background: -o-linear-gradient(top, rgba(255, 255, 255, 0.19) 0%, rgba(0, 0, 0, 0.19) 100%), url('../img/header_bg_pattern.png');
+  background: -ms-linear-gradient(top, rgba(255, 255, 255, 0.19) 0%, rgba(0, 0, 0, 0.19) 100%), url('../img/header_bg_pattern.png');
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.19) 0%, rgba(0, 0, 0, 0.19) 100%), url('../img/header_bg_pattern.png');
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#30ffffff', endColorstr='#30000000', GradientType=0), url('../img/header_bg_pattern.png');
+}
+.\@main_header .\-brand {
+  margin: 12px 0 5px;
+  float: left;
+}
+.\@main_header .headerinfo {
+  position: absolute;
+  right: 0;
+  width: 50%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.\@main_header .headerinfo h1 {
+  color: #161716;
+  margin: 0;
+}
+.\@main_header .headerinfo h1 small {
+  color: #232423;
+  font-size: 8px;
+}
+#map-container {
+  width: 100%;
+  height: 180px;
+}
+#map-container .mavatar {
+  width: 200px;
+}
+#map-container .mavatar:before,
+#map-container .mavatar:after {
+  content: "";
+  display: table;
+}
+#map-container .mavatar:after {
+  clear: both;
+}
+#map-container .minfo {
+  float: left;
+}
+#map-container .mavatar > a {
+  display: block;
+  float: left;
+  margin-right: 10px;
+}
+#map-container .mavatar > a img.photo {
+  width: 53px;
+  height: 53px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+#map-container .mname {
+  display: block;
+  font-weight: normal;
+  font-size: 12px;
+  margin: 7px 0;
+}
+#map-container .mage {
+  display: block;
+  font-weight: normal;
+  font-size: 7px;
+}
+#map-container .status {
+  display: block;
+  font-weight: normal;
+  font-size: 7px;
+}
+#map-container .status img {
+  width: 50%;
+}
+#map-container .viewprofile {
+  float: right;
+  font-weight: normal;
+  font-size: 7px;
+  line-height: 16px;
+  color: #ed4e4e;
+}
+h1 {
+  font-size: 15px;
+  color: #ed4e4e;
+  margin: 40px 0 15px;
+  font-weight: normal;
+}
+h1 small {
+  display: block;
+  font-size: 9px;
+  font-weight: 300;
+  color: #555555;
+}
+.\@main_footer {
+  font-size: 8px;
+  color: #777777;
+  margin: 20px 0 22px;
+}
