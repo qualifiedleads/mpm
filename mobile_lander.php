@@ -202,8 +202,8 @@ $iframe_url = $pieces[2];
             <button type="button" class="right"></button>
         </div>
     </section>
-    <div class="container">
-        <h1 class="+text-center">Subscribe to Beflirty <small>for £3.00 per week</small></h1>
+    <div class="container +text-center">
+        <h1>Subscribe to Beflirty <small>for £3.00 per week</small></h1>
         <iframe src="<?= $iframe_url ?>" width="280" height="125" scrolling="no" frameborder="0" id="frame" style="padding: 0;"></iframe>
     </div>
 </main>
