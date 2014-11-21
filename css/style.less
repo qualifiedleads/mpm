@@ -82,15 +82,18 @@ body {
     transform: translateY(-50%);
 
     h1 {
+      font-size: 15px;
       color: #161716;
       margin: 0;
-
-      small {
-        color: #232423;
-        font-size: 8px;
-      }
     }
   }
+}
+
+.slogan {
+  font-size: 14px;
+  font-weight: normal;
+  padding: 5px;
+  background: #eeeeee;
 }
 
 #map-container {
@@ -158,14 +161,14 @@ body {
 }
 
 h1 {
-  font-size: 15px;
+  font-size: 25px;
   color: @primary-color;
-  margin: 40px 0 15px;
+  margin: 35px 0 15px;
   font-weight: normal;
 
   small {
     display: block;
-    font-size: 9px;
+    font-size: 16px;
     font-weight: 300;
     color: @default-text-color;
   }
@@ -228,7 +231,7 @@ h1 {
   }
 
   &@{part}slides-wrapper {
-    height: 135px;
+    height: 170px;
     overflow: hidden;
   }
 
@@ -251,12 +254,12 @@ h1 {
   }
 
   h2 {
-    font-size: 10px;
+    font-size: 16px;
     margin: 7px 0 2px;
   }
 
   h3 {
-    font-size: 8px;
+    font-size: 12px;
     margin: 2px 0 7px;
     color: @lighter-text-color;
   }
@@ -273,21 +276,27 @@ h1 {
     line-height: 15px;
     padding: 0 7px;
 
+    &:before {
+      display: none;
+      width: 8px;
+      height: 8px;
+      -webkit-border-radius: 100%;
+      -moz-border-radius: 100%;
+      border-radius: 100%;
+      border: 1px solid @lightest-color;
+      margin-right: 4px;
+      vertical-align: middle;
+      position: relative;
+      top: -1px;
+    }
+
     &@{tweak}online {
       background: rgba(42,146,64,.05);
 
       &:before {
         content: '';
         display: inline-block;
-        width: 5px;
-        height: 5px;
-        -webkit-border-radius: 100%;
-        -moz-border-radius: 100%;
-        border-radius: 100%;
         background: #10f03f;
-        border: 1px solid @lightest-color;
-        margin-right: 3px;
-        vertical-align: text-bottom;
       }
     }
 
@@ -297,15 +306,7 @@ h1 {
       &:before {
         content: '';
         display: inline-block;
-        width: 5px;
-        height: 5px;
-        -webkit-border-radius: 100%;
-        -moz-border-radius: 100%;
-        border-radius: 100%;
         background: @primary-color;
-        border: 1px solid @lightest-color;
-        margin-right: 3px;
-        vertical-align: text-bottom;
       }
     }
   }
