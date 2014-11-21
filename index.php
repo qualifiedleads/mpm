@@ -1,3 +1,41 @@
+<?
+$iframe_url = "";
+$randk = trim(rand(10000000, 409237000));
+$strPostUrl = 'http://payforit.txtnation.com/api/?';
+$strPostReq = 'company=mpremium';
+$strPostReq .= '&ekey=ef97c86f0a444e3f79e99759399bb6ba';
+$strPostReq .= '&sub_period_units=weeks';
+$strPostReq .= '&sub_period=1';
+$strPostReq .= '&value=3.00';
+$strPostReq .= '&name=Beflirty';
+$strPostReq .= '&description=Beflirty';
+$strPostReq .= '&sub_repeat=0';
+$strPostReq .= '&brand=BeFlirty';
+$strPostReq .= '&window=embed_small';
+$strPostReq .= '&sub_grace_period=2';
+$strPostReq .= '&sub_grace_period_units=days';
+$strPostReq .= '&sub_suspend_period=10';
+$strPostReq .= '&sub_suspend_period_units=days';
+
+$strPostReq .= '&password=ef97c86f0a444e3f79e99759399bb6ba';
+$strPostReq .= '&callback_url=http%3A%2F%2Fbeflirty.net%2Fpayforitresponder.php';
+$strPostReq .= '&id=' . $randk . '|signupimobi';
+$strPostReq .= '&success_url=http%3A%2F%2Fbeflirty.net%2Fr%2F' . $randk; //http://dev.beflirty.net/r/
+$strPostReq .= '&cancel_url=http%3A%2F%2Fbeflirty.net%2Fsignupuk.php';//http://dev.beflirty.net/signupuk.php
+$strPostReq .= '&currency=GBP';
+
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, $strPostUrl);
+curl_setopt($ch, CURLOPT_POST, 1);
+curl_setopt($ch, CURLOPT_POSTFIELDS, "$strPostReq");
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($ch, CURLOPT_POST, 1);
+$strBuffer = curl_exec($ch);
+curl_close($ch);
+$pieces = explode("|", $strBuffer);
+$iframe_url = $pieces[2];
+?>
+
 <!DOCTYPE html>
 <html class="no-js">
     <head>
@@ -57,114 +95,28 @@
 
         <script type="text/javascript" src="//maps.google.co.il/maps/api/js?sensor=false"></script>
         <script type="text/javascript" src="//www.google.com/jsapi"></script>
-        <script type="text/javascript" src='//j.maxmind.com/app/geoip.js'></script>
+        <script type="text/javascript" src="//js.maxmind.com/js/geoip.js"></script>
         <script type="text/javascript" src="js/vendor/maplander/markers.js"></script>
     </head>
     <body>
         <header class="@main_header">
             <div class="container">
                 <div class="-brand">
-                    <img src="img/be_flirty_logo.png" alt="Be Flirty!"/>
+                    <img src="img/beflirty_logo.svg" alt="Be Flirty!"/>
                 </div>
                 <div class="headerinfo +text-center">
-                    <h1>Mobile Chat Rooms <small>Connect to real people just like you with
-                        unlimited chat and private messages.</small></h1>
+                    <h1>Mobile Chat Rooms</h1>
                 </div>
             </div>
         </header>
+        <div class="slogan +text-center">
+            Connect to real people just like you with unlimited chat and private messages.
+        </div>
         <main>
-            <section class="-slider-users clearfix">
-                <div class="-slider-users--slides-wrapper">
-                    <article class="active first">
-                        <div class="-slider-users--photo">
-                            <img src="img/user1.png" alt="Suzy William"/>
-                        </div>
-                        <h2>Suzy William</h2>
-                        <h3>Princess 18</h3>
-                        <button type="button" class="-btn +online">online</button>
-                    </article>
-                    <article class="active">
-                        <div class="-slider-users--photo">
-                            <img src="img/user1.png" alt="Suzy William"/>
-                        </div>
-                        <h2>Suzy William</h2>
-                        <h3>Princess 18</h3>
-                        <button type="button" class="-btn +online">online</button>
-                    </article>
-                    <article class="active">
-                        <div class="-slider-users--photo">
-                            <img src="img/user1.png" alt="Suzy William"/>
-                        </div>
-                        <h2>Suzy William</h2>
-                        <h3>Princess 18</h3>
-                        <button type="button" class="-btn +offline">offline</button>
-                    </article>
-                    <!--end of visible-->
-                    <article>
-                        <div class="-slider-users--photo">
-                            <img src="img/user1.png" alt="Suzy William"/>
-                        </div>
-                        <h2>Suzy William</h2>
-                        <h3>Princess 18</h3>
-                        <button type="button" class="-btn +offline">offline</button>
-                    </article>
-                    <article>
-                        <div class="-slider-users--photo">
-                            <img src="img/user1.png" alt="Suzy William"/>
-                        </div>
-                        <h2>Suzy William</h2>
-                        <h3>Princess 18</h3>
-                        <button type="button" class="-btn +offline">offline</button>
-                    </article>
-                    <article>
-                        <div class="-slider-users--photo">
-                            <img src="img/user1.png" alt="Suzy William"/>
-                        </div>
-                        <h2>Suzy William</h2>
-                        <h3>Princess 18</h3>
-                        <button type="button" class="-btn +offline">offline</button>
-                    </article>
-                    <article>
-                        <div class="-slider-users--photo">
-                            <img src="img/user1.png" alt="Suzy William"/>
-                        </div>
-                        <h2>Suzy William</h2>
-                        <h3>Princess 18</h3>
-                        <button type="button" class="-btn +offline">offline</button>
-                    </article>
-                    <article>
-                        <div class="-slider-users--photo">
-                            <img src="img/user1.png" alt="Suzy William"/>
-                        </div>
-                        <h2>Suzy William</h2>
-                        <h3>Princess 18</h3>
-                        <button type="button" class="-btn +offline">offline</button>
-                    </article>
-                    <article>
-                        <div class="-slider-users--photo">
-                            <img src="img/user1.png" alt="Suzy William"/>
-                        </div>
-                        <h2>Suzy William</h2>
-                        <h3>Princess 18</h3>
-                        <button type="button" class="-btn +offline">offline</button>
-                    </article>
-                    <article>
-                        <div class="-slider-users--photo">
-                            <img src="img/user1.png" alt="Suzy William"/>
-                        </div>
-                        <h2>Suzy William</h2>
-                        <h3>Princess 18</h3>
-                        <button type="button" class="-btn +offline">offline</button>
-                    </article>
-                </div>
-                <div class="-slider-users--navigation">
-                    <button type="button" class="left"></button>
-                    <button type="button" class="right"></button>
-                </div>
-            </section>
-            <div class="container">
-                <h1 class="+text-center">Subscribe to Beflirty <small>for £3.00 per week</small></h1>
-                <iframe src="http://pfi.me/0/802f9cab5c8e2705dad0dcacbdd44e60" width="280" height="125" scrolling="no" frameborder="0" id="frame" style="padding: 0;"></iframe>
+            <div id="map-container"></div>
+            <div class="container +text-center">
+                <h1>Subscribe to Beflirty <small>for £3.00 per week</small></h1>
+                <iframe src="<?= $iframe_url ?>" width="280" scrolling="no" frameborder="0" id="frame" style="padding: 0;"></iframe>
             </div>
         </main>
         <footer class="@main_footer">
