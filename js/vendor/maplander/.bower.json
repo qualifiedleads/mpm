@@ -1,0 +1,14 @@
+{
+  "name": "maplander",
+  "homepage": "https://github.com/TapTapMobile/maplander",
+  "_release": "d65cfd8145",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "d65cfd814540b82e7a2ab5271c423a260490bff7"
+  },
+  "_source": "https://github.com/TapTapMobile/maplander.git",
+  "_target": "*",
+  "_originalSource": "https://github.com/TapTapMobile/maplander.git",
+  "_direct": true
+}

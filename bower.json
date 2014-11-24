@@ -1,0 +1,17 @@
+{
+  "name": "mpm",
+  "version": "0.0.0",
+  "homepage": "https://github.com/qualifiedleads/mpm",
+  "authors": [
+    "ocReaper <ocreaper@gmail.com>"
+  ],
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "maplander": "https://github.com/TapTapMobile/maplander.git",
+    "modernizr": "~2.8.3"
+  }
+}
