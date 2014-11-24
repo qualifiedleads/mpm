@@ -40,7 +40,7 @@ $iframe_url = $pieces[2];
 <html class="no-js">
 <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>BeFlirty!</title>
     <meta name="description" content="">
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
@@ -91,7 +91,6 @@ $iframe_url = $pieces[2];
     -->
 
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/vendor/modernizr-2.7.1.min.js"></script>
 
     <script type="text/javascript" src="//maps.google.co.il/maps/api/js?sensor=false"></script>
     <script type="text/javascript" src="//www.google.com/jsapi"></script>
@@ -203,7 +202,6 @@ $iframe_url = $pieces[2];
         </div>
     </section>
     <div class="container +text-center">
-        <h1>Subscribe to Beflirty <small>for £3.00 per week</small></h1>
         <iframe src="<?= $iframe_url ?>" width="280" height="125" scrolling="no" frameborder="0" id="frame" style="padding: 0;"></iframe>
     </div>
 </main>
@@ -219,8 +217,7 @@ $iframe_url = $pieces[2];
 <!-- Add your site or application content here -->
 
 <script src="js/vendor/jquery-2.1.0.min.js"></script>
-<script src="js/helper.js"></script>
-<script src="js/main.js"></script>
+<script src="js/main.min.js"></script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <script>
@@ -230,86 +227,6 @@ $iframe_url = $pieces[2];
         e.src='//www.google-analytics.com/analytics.js';
         r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
     ga('create','UA-XXXXX-X');ga('send','pageview');
-</script>
-
-
-<!-- GOOGLE MAP -->
-<script type="text/javascript">
-    var city = geoip_city(),
-        country = geoip_country_name();
-    myplace = "" == city ? country : city + ", " + country;
-    var Sex = {
-        map: null,
-        mapContainer: document.getElementById("map-container"),
-        numMarkers: 12,
-        markers: [],
-        visibleInfoWindow: null,
-        init: function () {
-            Sex.map = new google.maps.Map(Sex.mapContainer, {
-                mapTypeId: google.maps.MapTypeId.ROADMAP,
-                disableDefaultUI: !0,
-                disableDoubleClickZoom: !0,
-                overviewMapControl: !1,
-                zoomControl: !1,
-                streetViewControl: !1,
-                mapTypeControl: !1,
-                scrollwheel: !1
-            });
-            geocoder = new google.maps.Geocoder;
-            Sex.geoLocate();
-            window.setTimeout(function () {
-                Sex.generateRandomMarkers(Sex.map.getCenter())
-            }, 2E3)
-        },
-        geoLocate: function () {
-            geocoder.geocode({
-                address: myplace,
-                partialmatch: !0
-            }, Sex.geocodeResult)
-        },
-        geocodeResult: function (b, a) {
-            "OK" == a && 0 < b.length ? (Sex.map.fitBounds(b[0].geometry.viewport), Sex.map.setZoom(12), lng = Sex.map.getCenter().lng()) : alert("Sorry but we can't find your location")
-        },
-        generateRandomMarkers: function (b) {
-            Sex.clearMarkers();
-            for (var a = 0; a < Sex.numMarkers; a++) {
-                var c = Math.random(),
-                    d = Math.random(),
-                    c = c * (0 == 1E6 * c % 2 ? 1 : -1),
-                    d = d * (0 == 1E6 * d % 2 ? 1 : -1),
-                    c = new google.maps.LatLng(b.lat() + 0.08 * c + 0.052, b.lng() + 0.2 * d + 0.08),
-                    c = new google.maps.Marker({
-                        map: Sex.map,
-                        title: datass.net[a].name + ", " + datass.net[a].age,
-                        position: c,
-                        icon: datass.net[a].pin,
-                        draggable: !1
-                    });
-                Sex.markers.push(c);
-                d = new google.maps.InfoWindow({
-                    content: "" + ('<div class="mavatar"><a href="go.php" target="_blank"><img class="photo" src="' + datass.net[a].avatar + '" /></a><div class="minfo"><span class="mname">' + datass.net[a].name + '</span> <span class="mage">Age: ' + datass.net[a].age + '</span><div class="status"><img src="js/vendor/maplander/images/online-status.gif" /><a href="go.php" class="viewprofile" target="_blank">View Profile</a></div></div></div>'),
-                    size: new google.maps.Size(50, 400)
-                });
-                google.maps.event.addListener(c, "click", Sex.openInfoWindow(d, c))
-            }
-        },
-        openInfoWindow: function (b, a) {
-            return function () {
-                Sex.visibleInfoWindow && Sex.visibleInfoWindow.close();
-                b.open(Sex.map, a);
-                Sex.visibleInfoWindow = b
-            }
-        },
-        generateTriggerCallback: function (b, a) {
-            return function () {
-                google.maps.event.trigger(b, a)
-            }
-        },
-        clearMarkers: function () {
-            for (var b = 0, a; a = Sex.markers[b]; b++) a.setVisible(!1)
-        }
-    };
-    new google.maps.event.addDomListener(window, "load", Sex.init, Sex);
 </script>
 </body>
 </html>
