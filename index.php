@@ -91,11 +91,7 @@ $iframe_url = $pieces[2];
         -->
 
         <link rel="stylesheet" href="css/style.css">
-
-        <script type="text/javascript" src="//maps.google.co.il/maps/api/js?sensor=false"></script>
-        <script type="text/javascript" src="//www.google.com/jsapi"></script>
-        <script type="text/javascript" src="//js.maxmind.com/js/geoip.js"></script>
-        <script type="text/javascript" src="js/vendor/maplander/markers.js"></script>
+        <link rel="stylesheet" href="js/vendor/owlcarousel/owl-carousel/owl.carousel.css">
     </head>
     <body>
         <header class="@main_header">
@@ -129,6 +125,11 @@ $iframe_url = $pieces[2];
         <!-- Add your site or application content here -->
 
         <script src="js/vendor/jquery-2.1.0.min.js"></script>
+        <script type="text/javascript" src="js/vendor/owlcarousel/owl-carousel/owl.carousel.min.js"></script>
+        <script type="text/javascript" src="//maps.google.co.il/maps/api/js?sensor=false"></script>
+        <script type="text/javascript" src="//www.google.com/jsapi"></script>
+        <script type="text/javascript" src="//js.maxmind.com/js/geoip.js"></script>
+        <script type="text/javascript" src="js/vendor/maplander/markers.js"></script>
         <script src="js/main.min.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
