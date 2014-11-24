@@ -1,51 +1,30 @@
-$.fn.WBSimpleSlider = function(options) {
-  return $(this).each(function() {
-    options = $.extend({
-      activeClass: 'active',
-      slidesSelector: "article",
-      startDuration: 10000,
-      duration: 10000
-    }, options);
+$(document).ready(function() {
 
-    var $slider = $(this),
-      $slides = $slider.find(options.slidesSelector),
-      totalImages = ($slides.length),
-      currentPos = 0,
-      $navigation = $slider.find('.-slider-users--navigation'),
-      $navigateBackward = $navigation.find('.left'),
-      $navigateForward = $navigation.find('.right'),
+  var owl = $(".-slider-users--slides-wrapper"),
+      $nav = $('.-slider-users--navigation');
 
-      getNextIndex = function(to) {
-        if ((to > 0) && ((currentPos + 3) >= totalImages)) return 0;
-        else if ((to < 0) && ((currentPos - 2) < 0)) return totalImages - 3;
-        else return currentPos + to;
-      },
-
-      slide = function(direction) {
-        var nextPos = getNextIndex(direction);
-
-        $slides.removeClass(options.activeClass);
-        $slides.eq(nextPos).addClass(options.activeClass).addClass('first');
-        $slides.eq((nextPos + 1)).addClass(options.activeClass);
-        $slides.eq((nextPos + 2)).addClass(options.activeClass);
-
-        currentPos = nextPos;
-      };
-
-    if ($slider.data('initialized')) return;
-    $slider.data('initialized', true);
-
-    $navigateForward.unbind('click.stepForward').bind('click.stepForward',function(){
-      slide(1);
-    });
-
-    $navigateBackward.unbind('click.stepBackward').bind('click.stepBackward',function(){
-      slide(-1);
-    });
+  owl.owlCarousel({
+    itemsCustom : [
+      [0, 3],
+      [330, 4],
+      [490, 7],
+      [700, 9],
+      [1000, 10],
+      [1200, 12],
+      [1400, 13],
+      [1600, 15]
+    ],
+    navigation : false,
+    pagination: false
   });
-};
 
-$('.-slider-users').WBSimpleSlider();
+  $nav.find(".right").click(function(){
+    owl.trigger('owl.next');
+  });
+  $nav.find(".left").click(function(){
+    owl.trigger('owl.prev');
+  });
+});
 
 if($('#map-container').length) {
   var city = geoip_city(),
