@@ -128,7 +128,6 @@ $iframe_url = $pieces[2];
         <script type="text/javascript" src="js/vendor/owlcarousel/owl-carousel/owl.carousel.min.js"></script>
         <script type="text/javascript" src="//maps.google.co.il/maps/api/js?sensor=false"></script>
         <script type="text/javascript" src="//www.google.com/jsapi"></script>
-        <script type="text/javascript" src="//js.maxmind.com/js/geoip.js"></script>
         <script type="text/javascript" src="js/vendor/maplander/markers.js"></script>
         <script src="js/main.min.js"></script>
 
