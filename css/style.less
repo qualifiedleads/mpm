@@ -182,43 +182,7 @@ h1 {
   padding: 25px;
 
   article {
-//    position: relative;
-//    width: 33.3%;
-//    float: left;
     text-align: center;
-//    margin-bottom: 30px;
-//    -webkit-transform: scaleX(0) translate3d(-100%,0,0);
-//    -moz-transform: scaleX(0) translate3d(-100%,0,0);
-//    -ms-transform: scaleX(0) translate3d(-100%,0,0);
-//    -o-transform: scaleX(0) translate3d(-100%,0,0);
-//    transform: scaleX(0) translate3d(-100%,0,0);
-//    -webkit-transform-origin: 0 0;
-//    -moz-transform-origin: 0 0;
-//    -ms-transform-origin: 0 0;
-//    -o-transform-origin: 0 0;
-//    transform-origin: 0 0;
-//    opacity: 0;
-//    -webkit-transition: all .4s;
-//    -moz-transition: all .4s;
-//    -ms-transition: all .4s;
-//    -o-transition: all .4s;
-//    transition: all .4s;
-//    max-width: 0px;
-//
-//    &.active {
-//      -webkit-transform: scaleX(1) translate3d(0,0,0);
-//      -moz-transform: scaleX(1) translate3d(0,0,0);
-//      -ms-transform: scaleX(1) translate3d(0,0,0);
-//      -o-transform: scaleX(1) translate3d(0,0,0);
-//      transform: scaleX(1) translate3d(0,0,0);
-//      opacity: 1;
-//      -webkit-transition: all .4s;
-//      -moz-transition: all .4s;
-//      -ms-transition: all .4s;
-//      -o-transition: all .4s;
-//      transition: all .4s;
-//      max-width: 300px;
-//    }
 
     &:before {
       content: '';
@@ -236,11 +200,6 @@ h1 {
       display: none;
     }
   }
-
-//  &@{part}slides-wrapper {
-//    height: 170px;
-//    overflow: hidden;
-//  }
 
   &@{part}photo {
     -webkit-border-radius: 100%;
@@ -304,6 +263,8 @@ h1 {
         content: '';
         display: inline-block;
         background: #10f03f;
+        -webkit-animation: blink 1s infinite;
+        animation: blink 1s infinite;
       }
     }
 
@@ -362,4 +323,52 @@ h1 {
 
 iframe {
   margin-top: 45px;
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
