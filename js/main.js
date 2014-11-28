@@ -1,3 +1,25 @@
+  /* jQuery Tiny Pub/Sub - v0.7 - 10/27/2011
+   * http://benalman.com/
+   * Copyright (c) 2011 "Cowboy" Ben Alman; Licensed MIT, GPL */
+
+(function($) {
+
+  var o = $({});
+
+  $.subscribe = function() {
+    o.on.apply(o, arguments);
+  };
+
+  $.unsubscribe = function() {
+    o.off.apply(o, arguments);
+  };
+
+  $.publish = function() {
+    o.trigger.apply(o, arguments);
+  };
+
+}(jQuery));
+
 $(document).ready(function() {
 
   var owl = $(".-slider-users--slides-wrapper"),
@@ -92,7 +114,9 @@ if($('#map-container').length) {
               content: "" + ('<div class="mavatar"><a href="go.php" target="_blank"><img class="photo" src="' + datass.net[a].avatar + '" /></a><div class="minfo"><span class="mname">' + datass.net[a].name + '</span> <span class="mage">Age: ' + datass.net[a].age + '</span><div class="status"><img src="js/vendor/maplander/images/online-status.gif" /><a href="go.php" class="viewprofile" target="_blank">View Profile</a></div></div></div>'),
               size: new google.maps.Size(50, 400)
             });
-            google.maps.event.addListener(c, "click", Sex.openInfoWindow(d, c))
+            google.maps.event.addListener(c, "click", Sex.openInfoWindow(d, c));
+
+            if(a == (Sex.numMarkers-1)) $.publish('openTheWindow',{infoWindow:d,marker:c});
           }
         },
         openInfoWindow: function (b, a) {
@@ -112,6 +136,10 @@ if($('#map-container').length) {
         }
       };
       new google.maps.event.addDomListener(window, "load", Sex.init, Sex);
+
+      $.subscribe('openTheWindow',function(name,publishedData){
+        Sex.openInfoWindow(publishedData.infoWindow,publishedData.marker).call();
+      })
     }
   });
 }
