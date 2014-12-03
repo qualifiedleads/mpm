@@ -112,9 +112,9 @@ $iframe_url = $pieces[2];
         <div class="-slider-users--slides-wrapper">
             <article>
                 <div class="-slider-users--photo">
-                    <img src="img/user1.png" alt="Suzy William"/>
+                    <img src="img/user_16.jpg" alt="Suzy William"/>
                 </div>
-                <h2>Suzy William</h2>
+                <h2>Rhea</h2>
                 <h3>Princess 18</h3>
                 <button type="button" class="-btn +online">online</button>
             </article>
@@ -122,17 +122,17 @@ $iframe_url = $pieces[2];
                 <div class="-slider-users--photo">
                     <img src="img/user1.png" alt="Suzy William"/>
                 </div>
-                <h2>Suzy William</h2>
-                <h3>Princess 18</h3>
+                <h2>India</h2>
+                <h3>CrystalLoverrz</h3>
                 <button type="button" class="-btn +online">online</button>
             </article>
             <article>
                 <div class="-slider-users--photo">
                     <img src="img/user1.png" alt="Suzy William"/>
                 </div>
-                <h2>Suzy William</h2>
-                <h3>Princess 18</h3>
-                <button type="button" class="-btn +offline">offline</button>
+                <h2>Jake</h2>
+                <h3>SonOfSam77</h3>
+                <button type="button" class="-btn +online">online</button>
             </article>
             <!--end of visible-->
             <article>
@@ -141,7 +141,23 @@ $iframe_url = $pieces[2];
                 </div>
                 <h2>Suzy William</h2>
                 <h3>Princess 18</h3>
-                <button type="button" class="-btn +offline">offline</button>
+                <button type="button" class="-btn +online">online</button>
+            </article>
+            <article>
+                <div class="-slider-users--photo">
+                    <img src="img/user1.png" alt="Suzy William"/>
+                </div>
+                <h2>Suzy William</h2>
+                <h3>Princess 18</h3>
+                <button type="button" class="-btn +online">online</button>
+            </article>
+            <article>
+                <div class="-slider-users--photo">
+                    <img src="img/user1.png" alt="Suzy William"/>
+                </div>
+                <h2>Suzy William</h2>
+                <h3>Princess 18</h3>
+                <button type="button" class="-btn +online">online</button>
             </article>
             <article>
                 <div class="-slider-users--photo">
@@ -157,23 +173,7 @@ $iframe_url = $pieces[2];
                 </div>
                 <h2>Suzy William</h2>
                 <h3>Princess 18</h3>
-                <button type="button" class="-btn +offline">offline</button>
-            </article>
-            <article>
-                <div class="-slider-users--photo">
-                    <img src="img/user1.png" alt="Suzy William"/>
-                </div>
-                <h2>Suzy William</h2>
-                <h3>Princess 18</h3>
-                <button type="button" class="-btn +offline">offline</button>
-            </article>
-            <article>
-                <div class="-slider-users--photo">
-                    <img src="img/user1.png" alt="Suzy William"/>
-                </div>
-                <h2>Suzy William</h2>
-                <h3>Princess 18</h3>
-                <button type="button" class="-btn +offline">offline</button>
+                <button type="button" class="-btn +online">online</button>
             </article>
             <article>
                 <div class="-slider-users--photo">
