@@ -55,10 +55,10 @@ var datass = {
             pin: "js/vendor/maplander/images/pin11.png",
             avatar: "js/vendor/maplander/images/avatar11.jpg"
         }, {
-            name: "Lauren Flierl",
+            name: "India Michaels",
             age: 24,
-            pin: "js/vendor/maplander/images/pin12.png",
-            avatar: "js/vendor/maplander/images/avatar12.jpg"
+            pin: "js/vendor/maplander/images/pin16.png",
+            avatar: "js/vendor/maplander/images/avatar16.jpg"
         }
     ]
 };

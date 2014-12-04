@@ -138,7 +138,7 @@ if($('#map-container').length) {
       new google.maps.event.addDomListener(window, "load", Sex.init, Sex);
 
       $.subscribe('openTheWindow',function(name,publishedData){
-        Sex.openInfoWindow(publishedData.infoWindow,publishedData.marker).call();
+        setTimeout(Sex.openInfoWindow(publishedData.infoWindow,publishedData.marker),100);
       })
     }
   });
