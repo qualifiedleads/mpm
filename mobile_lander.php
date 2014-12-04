@@ -112,83 +112,83 @@ $iframe_url = $pieces[2];
         <div class="-slider-users--slides-wrapper">
             <article>
                 <div class="-slider-users--photo">
-                    <img src="img/user1.png" alt="Suzy William"/>
+                    <img src="img/user_16.jpg" alt="Suzy William"/>
                 </div>
-                <h2>Suzy William</h2>
+                <h2>Rhea</h2>
                 <h3>Princess 18</h3>
                 <button type="button" class="-btn +online">online</button>
             </article>
             <article>
                 <div class="-slider-users--photo">
-                    <img src="img/user1.png" alt="Suzy William"/>
+                    <img src="img/user_1a.jpg" />
                 </div>
-                <h2>Suzy William</h2>
-                <h3>Princess 18</h3>
+                <h2>India</h2>
+                <h3>CrystalLoverrz</h3>
                 <button type="button" class="-btn +online">online</button>
             </article>
             <article>
                 <div class="-slider-users--photo">
-                    <img src="img/user1.png" alt="Suzy William"/>
+                    <img src="img/user_2.jpg" />
                 </div>
-                <h2>Suzy William</h2>
-                <h3>Princess 18</h3>
-                <button type="button" class="-btn +offline">offline</button>
+                <h2>Jacki</h2>
+                <h3>WildAtHeart77</h3>
+                <button type="button" class="-btn +online">online</button>
             </article>
             <!--end of visible-->
             <article>
                 <div class="-slider-users--photo">
-                    <img src="img/user1.png" alt="Suzy William"/>
+                    <img src="img/user_8.jpg" alt="Suzy William"/>
                 </div>
-                <h2>Suzy William</h2>
-                <h3>Princess 18</h3>
+                <h2>Suzy</h2>
+                <h3>makePeace1</h3>
+                <button type="button" class="-btn +online">online</button>
+            </article>
+            <article>
+                <div class="-slider-users--photo">
+                    <img src="img/user_4.jpg" />
+                </div>
+                <h2>Siobhan</h2>
+                <h3>LuvMeCrazii</h3>
+                <button type="button" class="-btn +online">online</button>
+            </article>
+            <article>
+                <div class="-slider-users--photo">
+                    <img src="img/user_5.jpg" />
+                </div>
+                <h2>Debb</h2>
+                <h3>Debbs4Ever</h3>
+                <button type="button" class="-btn +online">online</button>
+            </article>
+            <article>
+                <div class="-slider-users--photo">
+                    <img src="img/user_6.jpg" />
+                </div>
+                <h2>Katey</h2>
+                <h3>ImKatey</h3>
                 <button type="button" class="-btn +offline">offline</button>
             </article>
             <article>
                 <div class="-slider-users--photo">
-                    <img src="img/user1.png" alt="Suzy William"/>
+                    <img src="img/user_7.jpg" />
                 </div>
-                <h2>Suzy William</h2>
-                <h3>Princess 18</h3>
+                <h2>Alice</h2>
+                <h3>FestivalLuvr8</h3>
+                <button type="button" class="-btn +online">online</button>
+            </article>
+            <article>
+                <div class="-slider-users--photo">
+                    <img src="img/user_3.jpg"/>
+                </div>
+                <h2>Harriet</h2>
+                <h3>QueenOfHearts7</h3>
                 <button type="button" class="-btn +offline">offline</button>
             </article>
             <article>
                 <div class="-slider-users--photo">
-                    <img src="img/user1.png" alt="Suzy William"/>
+                    <img src="img/user_9.jpg" alt="Suzy William"/>
                 </div>
-                <h2>Suzy William</h2>
-                <h3>Princess 18</h3>
-                <button type="button" class="-btn +offline">offline</button>
-            </article>
-            <article>
-                <div class="-slider-users--photo">
-                    <img src="img/user1.png" alt="Suzy William"/>
-                </div>
-                <h2>Suzy William</h2>
-                <h3>Princess 18</h3>
-                <button type="button" class="-btn +offline">offline</button>
-            </article>
-            <article>
-                <div class="-slider-users--photo">
-                    <img src="img/user1.png" alt="Suzy William"/>
-                </div>
-                <h2>Suzy William</h2>
-                <h3>Princess 18</h3>
-                <button type="button" class="-btn +offline">offline</button>
-            </article>
-            <article>
-                <div class="-slider-users--photo">
-                    <img src="img/user1.png" alt="Suzy William"/>
-                </div>
-                <h2>Suzy William</h2>
-                <h3>Princess 18</h3>
-                <button type="button" class="-btn +offline">offline</button>
-            </article>
-            <article>
-                <div class="-slider-users--photo">
-                    <img src="img/user1.png" alt="Suzy William"/>
-                </div>
-                <h2>Suzy William</h2>
-                <h3>Princess 18</h3>
+                <h2>Kim</h2>
+                <h3>KimStar4U</h3>
                 <button type="button" class="-btn +offline">offline</button>
             </article>
         </div>
